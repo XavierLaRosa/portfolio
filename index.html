@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://kit.fontawesome.com/6d61992055.js"></script>
+    <title>Portfolio</title>
+    <style>
+      .row {
+        margin-top: 2%;
+      }
+      .skill {
+        margin: 1%;
+      }
+      .accordion {
+        cursor: pointer;
+        padding: 1%;
+        border: none;
+        text-align: center;
+        outline: none;
+        transition: 0.4s;
+        margin: auto;
+      }
+
+      .panel {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      .fademeFirst {
+        opacity: 0;
+        transition-duration: 2.5s;
+        transition-delay: 0s;
+      }
+      .fademeSecond {
+        opacity: 0;
+        transition-duration: 2.5s;
+        transition-delay: 1.5s;
+      }
+      .btn {
+        transition: all 0.3s ease-in-out;
+      }
+      .btn:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button class="btn btn-primary" onclick="toggleView()">tap me</button> -->
+    <div>
+      <nav
+        class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary navbar-fixed-top"
+      >
+        <!-- <a class="navbar-brand" href="./index.html">Xavier La Rosa</a> -->
+        <div class="container fademeSecond">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarColor02"
+            aria-controls="navbarColor02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto" style="margin: auto;">
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/xavier-a-larosa/"
+                  >LinkedIn <i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  target="_blank"
+                  href="https://github.com/XavierLaRosa"
+                  >GitHub <i class="fab fa-github-square"></i
+                ></a>
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#resumeModal"
+                  >Resume <i class="far fa-newspaper"></i
+                ></a>
+              </li>
+
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#contactModal"
+                  >Contact Me <i class="fas fa-address-book"></i
+                ></a>
+              </li>
+
+              <li class="nav-item active dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Project Links
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://github.com/sangmattxavier/Project-GG"
+                    >Project-GG <i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://github.com/RU-Nardwuar/iOS_Nardwuar"
+                    >Nardwuar <i class="fab fa-github"></i></a
+                  ><a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://github.com/XavierLaRosa/weatherApp"
+                    >BetterWeather <i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://github.com/XavierLaRosa/Roll-a-Ball-With-a-Twist"
+                    >Roll a Ball With a Twist <i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://github.com/XavierLaRosa/TaskMNGR"
+                    >TaskMNGR <i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container" style="padding: 2%;">
+        <div class="row">
+          <div class="col-md-6 fademeFirst">
+            <img
+              src="./assets/profile_pic_cropped.png"
+              alt=""
+              class="rounded-circle float-right"
+              style="max-width: 275px; max-height: 275px; margin: 2%;"
+            />
+          </div>
+          <div
+            class="col-md-6"
+            style="border-left: 1px rgb(199, 199, 199) solid; padding: 3%;"
+          >
+            <div class="row fademeFirst" style="padding-left: 2%;">
+              <h1>Welcome!</h1>
+            </div>
+            <div
+              class="row justify-content-between fademeSecond"
+              style="padding-left: 2%;"
+            >
+              <p>
+                My name is Xavier and I am a recent Application Development
+                Intern at the Depository Trust & Clearing Corporation (DTCC).
+                Rising senior at Rutgers University, New Brunswick studying
+                Computer Science.
+              </p>
+            </div>
+            <div class="row d-flex justify-content-center fademeSecond">
+              <button
+                class="btn btn-primary fademeSecond skill"
+                data-toggle="modal"
+                data-target="#educationModal"
+              >
+                Education <i class="fas fa-graduation-cap"></i>
+              </button>
+
+              <button
+                class="btn btn-success fademeSecond skill"
+                data-toggle="modal"
+                data-target="#employmentModal"
+              >
+                Relevant Employment <i class="fas fa-briefcase"></i>
+              </button>
+
+              <button
+                class="btn btn-danger fademeSecond skill"
+                data-toggle="modal"
+                data-target="#leadershipModal"
+              >
+                Leadership <i class="fas fa-users"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <h3 class="text-center fademeFirst" style="margin-top: 2%;">
+          My Main Skills
+        </h3>
+
+        <div class="row d-flex justify-content-center fademeSecond">
+          <button
+            class="btn btn-danger skill"
+            onclick="smoothScroll(document.getElementById('skillset'))"
+          >
+            ReactJS <i class="fab fa-react"></i>
+          </button>
+          <button
+            class="btn btn-success skill"
+            onclick="smoothScroll(document.getElementById('skillset'))"
+          >
+            Angular
+            <i class="fab fa-angular"></i>
+          </button>
+          <button
+            class="btn btn-warning skill"
+            onclick="smoothScroll(document.getElementById('skillset'))"
+          >
+            iOS Development <i class="fas fa-mobile-alt"></i>
+          </button>
+          <button
+            class="btn btn-primary skill"
+            onclick="smoothScroll(document.getElementById('skillset'))"
+          >
+            Java <i class="fab fa-java"></i>
+          </button>
+          <button
+            class="btn btn-info skill"
+            onclick="smoothScroll(document.getElementById('skillset'))"
+          >
+            UX <i class="fas fa-paint-brush"></i>
+          </button>
+        </div>
+        <div class="row fademeFirst">
+          <div class="card " style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title fademeFirst">Coding Projects</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Check out my most proud current and past projects!
+              </h6>
+              <div
+                id="carouselProjectIndicators"
+                class="carousel slide fademeSecond"
+                data-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselProjectIndicators"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselProjectIndicators"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselProjectIndicators"
+                    data-slide-to="2"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active text-center">
+                    <h6>Project-GG</h6>
+                    <span class="badge badge-pill badge-primary">ReactJS</span>
+                    <span class="badge badge-pill badge-secondary"
+                      >Adobe XD</span
+                    >
+                    <span class="badge badge-pill badge-success">Kanban</span>
+                    <p>
+                      Working with a team of three to develop a social media
+                      website that is aimed towards gamers.
+                    </p>
+
+                    <img
+                      class="d-block w-100"
+                      src="./assets/gg.gif"
+                      alt="First slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/sangmattxavier/Project-GG"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item text-center">
+                    <h6>Nardwuar</h6>
+                    <span class="badge badge-pill badge-primary">Swift</span>
+                    <span class="badge badge-pill badge-secondary">Xcode</span>
+                    <span class="badge badge-pill badge-success">Postman</span>
+                    <p>
+                      Worked alongside a backend developer to create a mobile
+                      application.
+                    </p>
+                    <img
+                      class="d-block w-100"
+                      src="./assets/nardwuar.gif"
+                      alt="Third slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/RU-Nardwuar/iOS_Nardwuar"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item text-center">
+                    <h6>BetterWeather</h6>
+                    <span class="badge badge-pill badge-primary">Swift</span>
+                    <span class="badge badge-pill badge-secondary">Xcode</span>
+
+                    <span class="badge badge-pill badge-success">Postman</span>
+                    <span class="badge badge-pill badge-info">DarkSky API</span>
+                    <p>
+                      Created a mobile application that returns current weather
+                      data and data for seven days forward.
+                    </p>
+                    <img
+                      class="d-block w-100"
+                      src="./assets/betterweather.gif"
+                      alt="Second slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/XavierLaRosa/weatherApp"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselProjectIndicators"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselProjectIndicators"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row fademeFirst">
+          <div class="card " style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">UX Projects</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Check out my most proud current and past projects!
+              </h6>
+              <div
+                id="carouselUXIndicators"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselUXIndicators"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselUXIndicators"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselUXIndicators"
+                    data-slide-to="2"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active text-center">
+                    <h6>Project-GG</h6>
+                    <span class="badge badge-pill badge-primary">ReactJS</span>
+                    <span class="badge badge-pill badge-secondary"
+                      >Adobe XD</span
+                    >
+                    <span class="badge badge-pill badge-success">Kanban</span>
+                    <p>
+                      Working with a team of three to develop a social media
+                      website that is aimed towards gamers.
+                    </p>
+
+                    <img
+                      class="d-block w-100"
+                      src="./assets/gg.gif"
+                      alt="First slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/sangmattxavier/Project-GG"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item text-center">
+                    <h6>Nardwuar</h6>
+                    <span class="badge badge-pill badge-primary">Swift</span>
+                    <span class="badge badge-pill badge-secondary">Xcode</span>
+                    <span class="badge badge-pill badge-success">Postman</span>
+                    <p>
+                      Worked alongside a backend developer to create a mobile
+                      application.
+                    </p>
+                    <img
+                      class="d-block w-100"
+                      src="./assets/nardwuar.gif"
+                      alt="Third slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/RU-Nardwuar/iOS_Nardwuar"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item text-center">
+                    <h6>BetterWeather</h6>
+                    <span class="badge badge-pill badge-primary">Swift</span>
+                    <span class="badge badge-pill badge-secondary">Xcode</span>
+
+                    <span class="badge badge-pill badge-success">Postman</span>
+                    <span class="badge badge-pill badge-info">DarkSky API</span>
+                    <p>
+                      Created a mobile application that returns current weather
+                      data and data for seven days forward.
+                    </p>
+                    <img
+                      class="d-block w-100"
+                      src="./assets/betterweather.gif"
+                      alt="Second slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/XavierLaRosa/weatherApp"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselUXIndicators"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselUXIndicators"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="row justify-content-center fademeFirst" id="skillset">
+          <div class="col-md-7" style="padding: 0;">
+            <div class="card float-right" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Skillset Overview</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  See what makes me a well-rounded developer & designer!
+                </h6>
+                <canvas id="myChart" width="1600" height="900"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">List of Skills</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  See what I can do!
+                </h6>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="prog-tab"
+                      data-toggle="tab"
+                      href="#prog"
+                      role="tab"
+                      aria-controls="prog"
+                      aria-selected="true"
+                      style="color: #3e95cd; font-weight: bold;"
+                      >Languages</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="soft-tab"
+                      data-toggle="tab"
+                      href="#soft"
+                      role="tab"
+                      aria-controls="soft"
+                      aria-selected="false"
+                      style="color: #8e5ea2; font-weight: bold;"
+                      >Software</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="ux-tab"
+                      data-toggle="tab"
+                      href="#ux"
+                      role="tab"
+                      aria-controls="ux"
+                      aria-selected="false"
+                      style="color: #3cba9f; font-weight: bold;"
+                      >UX</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="misc-tab"
+                      data-toggle="tab"
+                      href="#misc"
+                      role="tab"
+                      aria-controls="misc"
+                      aria-selected="false"
+                      style="color: #9b5a5a; font-weight: bold;"
+                      >Misc.</a
+                    >
+                  </li>
+                </ul>
+                <div
+                  class="tab-content"
+                  style="height: 300px; overflow-y: scroll;"
+                  id="myTabContent"
+                >
+                  <div
+                    class="tab-pane fade show active"
+                    id="prog"
+                    role="tabpanel"
+                    aria-labelledby="prog-tab"
+                  >
+                    <ul class="list-group">
+                      <li class="list-group-item">Java</li>
+                      <li class="list-group-item">Swift</li>
+                      <li class="list-group-item">JavaScript</li>
+                      <li class="list-group-item">HTML/CSS</li>
+                      <li class="list-group-item">Bash Scripting</li>
+                      <li class="list-group-item">Python</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="soft"
+                    role="tabpanel"
+                    aria-labelledby="soft-tab"
+                  >
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        Microsoft Visual Studio Code
+                      </li>
+                      <li class="list-group-item">Xcode</li>
+                      <li class="list-group-item">IntelliJ IDEA & Eclipse</li>
+                      <li class="list-group-item">Postman</li>
+                      <li class="list-group-item">Adobe Illustrator</li>
+                      <li class="list-group-item">Adobe XD</li>
+                      <li class="list-group-item">Axure RP PRO</li>
+                      <li class="list-group-item">Git</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="ux"
+                    role="tabpanel"
+                    aria-labelledby="ux-tab"
+                  >
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        User Research Case Studies
+                      </li>
+                      <li class="list-group-item">Conduct User Interviews</li>
+                      <li class="list-group-item">
+                        Design & Prototype Wireframes
+                      </li>
+                      <li class="list-group-item">
+                        Practice User Centered Design
+                      </li>
+                      <li class="list-group-item">Axure RP PRO</li>
+                      <li class="list-group-item">Adobe XD</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="misc"
+                    role="tabpanel"
+                    aria-labelledby="misc-tab"
+                  >
+                    <ul class="list-group">
+                      <li class="list-group-item">ReactJS Library</li>
+                      <li class="list-group-item">Angular Framework</li>
+                      <li class="list-group-item">Bootstrap</li>
+                      <li class="list-group-item">Git & GitHub/BitBucket</li>
+                      <li class="list-group-item">JIRA</li>
+                      <li class="list-group-item">Agile Methodologies</li>
+                      <li class="list-group-item">
+                        Object Oriented Programming
+                      </li>
+                      <li class="list-group-item">Google Firebase</li>
+                      <li class="list-group-item">Chart.js Library</li>
+                      <li class="list-group-item">
+                        Computer Hardware Assembly
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <form
+        method="POST"
+        action="https://formspree.io/xavier.a.larosa@gmail.com"
+      >
+        <input type="email" name="email" placeholder="Your email" />
+        <textarea name="message" placeholder="Test Message"></textarea>
+        <button type="submit">Send Test</button>
+      </form> -->
+
+        <!-- Button trigger modal -->
+        <!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="resumeModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="resumeModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="resumeModalLabel">
+                  Resume - Xavier La Rosa
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <object
+                  data="./assets/resume.pdf#page=2"
+                  type="application/pdf"
+                  width="100%"
+                  height="100%"
+                  style="height: 900px; margin-top: 2%;"
+                >
+                  <p>
+                    Your browser does not support PDFs.
+                    <a href="./assets/resume.pdf">Download the PDF</a>.
+                  </p>
+                </object>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <img
+              src="./assets/rutgers.png"
+              class="img-fluid"
+              style="max-width: 10%;"
+              alt="Responsive image"
+            />
+            <img
+              src="./assets/dtcc.jpeg"
+              class="img-fluid"
+              style="max-width: 30%;"
+              alt="Responsive image"
+            />
+            <img
+              src="./assets/hackru.png"
+              class="img-fluid"
+              style="max-width: 10%;"
+              alt="Responsive image"
+            /> -->
+
+        <!-- Button trigger modal -->
+        <!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="contactModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="contactModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">
+                  Send me an email!
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h6 class="card-title">
+                  Just input your email and message, click submit, and I'll make
+                  sure to get back to you ASAP
+                </h6>
+                <form
+                  method="POST"
+                  action="https://formspree.io/xavier.a.larosa@gmail.com"
+                >
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"
+                      >Email</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email"
+                        class="form-control"
+                        id="inputEmail3"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label"
+                      >Body</label
+                    >
+                    <div class="col-sm-10">
+                      <textarea
+                        name="message"
+                        placeholder="Your message"
+                        class="form-control"
+                        id="inputPassword3"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn btn-primary">
+                        Submit Email
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="educationModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="educationModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="educationModalLabel">
+                  Education
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 class="card-title">Rutgers University, New Brunswick</h5>
+                <ul>
+                  <li>Jan. 2018 - Present</li>
+                  <li>B.S Computer Science</li>
+                  <li>Dean's List</li>
+                  <li>Member of the National Society of Collegiate Scholars</li>
+                </ul>
+                <h5 class="card-title">County College of Morris (CCM)</h5>
+                <ul>
+                  <li>Aug. 2015 - Jan.2018</li>
+                  <li>Associates in Computer Science</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="employmentModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="employmentModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="employmentModalLabel">
+                  Relevant Employment
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 class="card-title">
+                  The Depository Trust & Clearing Corporation (DTCC)
+                </h5>
+                <h6>Application Development Intern</h6>
+                <h6>Jun. 2019 - Aug. 2019</h6>
+                <ul>
+                  <li>
+                    Developed a web application with a team comprised of only
+                    interns to automate and solve an existing business problem
+                  </li>
+                  <li>
+                    Designed and prototyped wireframes for a full redesign
+                    project on a legacy application
+                  </li>
+                  <li>
+                    Developed and enhanced End-User web applications, such as,
+                    creating an Analytics Dashboard using the Chart.js library
+                    for data visuals
+                  </li>
+                  <li>
+                    Performed User Research Case Studies and followed a user
+                    centered design pattern for all projects
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="leadershipModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="leadershipModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="leadershipModalLabel">
+                  Leadership
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 class="card-title">
+                  HackRU
+                </h5>
+                <h6>Finance Team</h6>
+                <h6>Sep. 2018 - Present</h6>
+                <ul>
+                  <li>
+                    Reach out to companies for partnership opportunities
+                  </li>
+                  <li>
+                    Supervise event and attend to needs of company
+                    representatives
+                  </li>
+                  <li>
+                    Analyze and strategize a budgeting plan
+                  </li>
+                </ul>
+
+                <h5 class="card-title">
+                  Rutgers Mobile App Development Club (RUMAD)
+                </h5>
+                <h6>Representative & Student</h6>
+                <h6>Sep. 2018 - Present</h6>
+                <ul>
+                  <li>
+                    Attend accelerated coding program to sharpen skills in iOS
+                    Development
+                  </li>
+                  <li>
+                    Worked with teams in an agile SCRUM methodology to create
+                    projects
+                  </li>
+                  <li>
+                    Promote and make testimonials about the mobile app community
+                  </li>
+                </ul>
+
+                <h5 class="card-title">
+                  Undergraduate Student Alliance of Computer Science (USACS)
+                </h5>
+                <h6>Member</h6>
+                <h6>Sep. 2018 - Present</h6>
+                <ul>
+                  <li>
+                    Network with like-minded individuals
+                  </li>
+                  <li>
+                    Attend Computer Science events
+                  </li>
+                  <li>
+                    Volunteer in events to help spread awareness and create a
+                    tighter community
+                  </li>
+                </ul>
+
+                <h5 class="card-title">
+                  County College of Morris Dance Club (CCMDC)
+                </h5>
+                <h6>President</h6>
+                <h6>May 2015 - Jan. 2016</h6>
+                <ul>
+                  <li>
+                    Brought a 2 year long absent club back into operation
+                  </li>
+                  <li>
+                    Delegated work and handled social media platforms
+                  </li>
+                  <li>
+                    Created a stronger dance community
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <form>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button class="btn btn-primary accordion">View Resume</button>
+              </div>
+              <div class="panel">
+                <p>
+                  <object
+                    data="./assets/resume.pdf#page=2"
+                    type="application/pdf"
+                    width="100%"
+                    height="100%"
+                    style="height: 900px;"
+                  >
+                    <p>
+                      Your browser does not support PDFs.
+                      <a href="./assets/resume.pdf">Download the PDF</a>.
+                    </p>
+                  </object>
+                </p>
+              </div>
+            </div>
+            <div class="form-group row"></div>
+          </form> -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function() {
+        var first = document.getElementsByClassName("fademeFirst")
+        for (var i = 0; i < first.length; i++) {
+          first[i].style.opacity = 1
+        }
+        var second = document.getElementsByClassName("fademeSecond")
+        for (var i = 0; i < second.length; i++) {
+          second[i].style.opacity = 1
+        }
+      }
+      function toggleView() {
+        var x = document.getElementById("view")
+        if (x.style.display === "none") {
+          x.style.display = "block"
+        } else {
+          x.style.display = "none"
+        }
+      }
+      window.smoothScroll = function(target) {
+        var scrollContainer = target
+        do {
+          //find scroll container
+          scrollContainer = scrollContainer.parentNode
+          if (!scrollContainer) return
+          scrollContainer.scrollTop += 1
+        } while (scrollContainer.scrollTop == 0)
+
+        var targetY = 0
+        do {
+          //find the top of target relatively to the container
+          if (target == scrollContainer) break
+          targetY += target.offsetTop
+        } while ((target = target.offsetParent))
+
+        scroll = function(c, a, b, i) {
+          i++
+          if (i > 40) return
+          c.scrollTop = a + ((b - a) / 40) * i
+          setTimeout(function() {
+            scroll(c, a, b, i)
+          }, 20)
+        }
+        // start scrolling
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0)
+      }
+      var myVar = 20
+      var myArray = [1, 2, 3, 4, 5, 6]
+      new Chart(document.getElementById("myChart"), {
+        type: "pie",
+        data: {
+          labels: [
+            "Programming Languages",
+            "Software Technologies",
+            "UX Practices",
+            "Miscellaneous Technical Skills"
+          ],
+          datasets: [
+            {
+              label: "Skills",
+              backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#9b5a5a"],
+              data: [6, 8, 6, 10]
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: false,
+            text: "Overview of Technical Skills"
+          },
+          legend: {
+            position: "left"
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
