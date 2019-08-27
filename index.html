@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://kit.fontawesome.com/6d61992055.js"></script>
     <title>Portfolio</title>
@@ -39,20 +40,35 @@
       }
       .fademeFirst {
         opacity: 0;
-        transition-duration: 2.5s;
+        transition-duration: 1.5s;
         transition-delay: 0s;
       }
       .fademeSecond {
         opacity: 0;
-        transition-duration: 2.5s;
-        transition-delay: 1.5s;
+        transition-duration: 1s;
+        transition-delay: 0.75s;
       }
-      .btn {
+      .fademeThird {
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-delay: 1.25s;
+      }
+      .btn, .nav-item{
         transition: all 0.3s ease-in-out;
       }
-      .btn:hover {
+      .btn:hover, .nav-item:hover{
         transform: scale(1.1);
       }
+      
+      @media screen and (max-width: 1199px) {
+        .button-text {
+          display: none;
+        }
+        #bio {
+          border: none;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -62,7 +78,7 @@
         class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary navbar-fixed-top"
       >
         <!-- <a class="navbar-brand" href="./index.html">Xavier La Rosa</a> -->
-        <div class="container fademeSecond">
+        <div class="container fademeThird">
           <button
             class="navbar-toggler"
             type="button"
@@ -78,54 +94,61 @@
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto" style="margin: auto;">
               <li class="nav-item active">
-                <a class="nav-link" href="./index.html"
+                <a class="nav-link animated bounce" 
+                href="./index.html"
+                style="animation-delay: 1.5s;"
                   >Home <span class="sr-only">(current)</span></a
                 >
               </li>
               <li class="nav-item active">
                 <a
-                  class="nav-link"
+                  class="nav-link animated bounce"
                   target="_blank"
                   href="https://www.linkedin.com/in/xavier-a-larosa/"
+                  style="animation-delay: 1.65s;"
                   >LinkedIn <i class="fab fa-linkedin"></i
                 ></a>
               </li>
               <li class="nav-item active">
                 <a
-                  class="nav-link"
+                  class="nav-link animated bounce "
                   target="_blank"
                   href="https://github.com/XavierLaRosa"
+                  style="animation-delay: 1.8s;"
                   >GitHub <i class="fab fa-github-square"></i
                 ></a>
               </li>
               <li class="nav-item active">
                 <a
-                  class="nav-link"
+                  class="nav-link animated bounce "
                   href="#"
                   data-toggle="modal"
                   data-target="#resumeModal"
+                  style="animation-delay: 1.95s;"
                   >Resume <i class="far fa-newspaper"></i
                 ></a>
               </li>
 
               <li class="nav-item active">
                 <a
-                  class="nav-link"
+                  class="nav-link animated bounce"
                   href="#"
                   data-toggle="modal"
                   data-target="#contactModal"
+                  style="animation-delay: 2.1s;"
                   >Contact Me <i class="fas fa-address-book"></i
                 ></a>
               </li>
 
               <li class="nav-item active dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link animated bounce dropdown-toggle"
                   href="#"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
+                  style="animation-delay: 2.25s;"
                 >
                   Project Links
                 </a>
@@ -170,65 +193,64 @@
       </nav>
 
       <div class="container" style="padding: 2%;">
-        <div class="row">
-          <div class="col-md-6 fademeFirst">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
             <img
               src="./assets/profile_pic_cropped.png"
               alt=""
-              class="rounded-circle float-right"
-              style="max-width: 275px; max-height: 275px; margin: 2%;"
+              class="rounded-circle mx-auto d-block fademeFirst"
+              style="max-width: 100%;
+              height: auto; margin: 0;"
             />
           </div>
           <div
             class="col-md-6"
-            style="border-left: 1px rgb(199, 199, 199) solid; padding: 3%;"
+            id="bio"
+            style="border-left: 1px rgb(199, 199, 199) solid;"
           >
-            <div class="row fademeFirst" style="padding-left: 2%;">
-              <h1>Welcome!</h1>
-            </div>
-            <div
-              class="row justify-content-between fademeSecond"
-              style="padding-left: 2%;"
-            >
-              <p>
-                My name is Xavier and I am a recent Application Development
-                Intern at the Depository Trust & Clearing Corporation (DTCC).
-                Rising senior at Rutgers University, New Brunswick studying
-                Computer Science.
-              </p>
-            </div>
-            <div class="row d-flex justify-content-center fademeSecond">
-              <button
-                class="btn btn-primary fademeSecond skill"
-                data-toggle="modal"
-                data-target="#educationModal"
-              >
-                Education <i class="fas fa-graduation-cap"></i>
-              </button>
+            <h1 class='fademeFirst'>Welcome!</h1>
+            <p>
+              <span class="fademeFirst">My name is Xavier</span> <span class="fademeSecond">and I am a recent Application Development Intern
+              at the Depository Trust & Clearing Corporation (DTCC). Rising
+              senior at Rutgers University, New Brunswick studying Computer
+              Science.</span>
+            </p>
+            <div class="row justify-content-center fademeSecond">
+     
+                <button
+                  class="btn btn-primary fademeSecond skill"
+                  data-toggle="modal"
+                  data-target="#educationModal"
+                >
+                  <span class="button-text">Education </span
+                  ><span><i class="fas fa-graduation-cap"></i></span>
+                </button>
 
-              <button
-                class="btn btn-success fademeSecond skill"
-                data-toggle="modal"
-                data-target="#employmentModal"
-              >
-                Relevant Employment <i class="fas fa-briefcase"></i>
-              </button>
-
-              <button
-                class="btn btn-danger fademeSecond skill"
-                data-toggle="modal"
-                data-target="#leadershipModal"
-              >
-                Leadership <i class="fas fa-users"></i>
-              </button>
+                <button
+                  class="btn btn-success fademeSecond skill"
+                  data-toggle="modal"
+                  data-target="#employmentModal"
+                >
+                  <span class="button-text">Employment </span>
+                  <span><i class="fas fa-briefcase"></i></span>
+                </button>
+          
+                <button
+                  class="btn btn-danger fademeSecond skill"
+                  data-toggle="modal"
+                  data-target="#leadershipModal"
+                >
+                  <span class="button-text">Leadership </span
+                  ><span><i class="fas fa-users"></i></span>
+          
             </div>
           </div>
         </div>
-        <h3 class="text-center fademeFirst" style="margin-top: 2%;">
+        <h3 class="text-center fademeThird" style="margin-top: 2%;">
           My Main Skills
         </h3>
 
-        <div class="row d-flex justify-content-center fademeSecond">
+        <div class="row d-flex justify-content-center fademeThird">
           <button
             class="btn btn-danger skill"
             onclick="smoothScroll(document.getElementById('skillset'))"
@@ -261,10 +283,10 @@
             UX <i class="fas fa-paint-brush"></i>
           </button>
         </div>
-        <div class="row fademeFirst">
+        <div class="row fademeThird">
           <div class="card " style="width: 100%;">
             <div class="card-body">
-              <h5 class="card-title fademeFirst">Coding Projects</h5>
+              <h5 class="card-title fademeThird">Coding Projects</h5>
               <h6 class="card-subtitle mb-2 text-muted">
                 Check out my most proud current and past projects!
               </h6>
@@ -286,6 +308,10 @@
                   <li
                     data-target="#carouselProjectIndicators"
                     data-slide-to="2"
+                  ></li>
+                  <li
+                    data-target="#carouselProjectIndicators"
+                    data-slide-to="3"
                   ></li>
                 </ol>
                 <div class="carousel-inner">
@@ -363,6 +389,29 @@
                         class="btn btn-primary shadow-lg"
                         target="_blank"
                         href="https://github.com/XavierLaRosa/weatherApp"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item text-center">
+                    <h6>Roll a Ball With a Twist</h6>
+                    <span class="badge badge-pill badge-primary">Unity</span>
+                    <span class="badge badge-pill badge-success">C#</span>
+                    <p>
+                      Created a two player unity application where players collect gems and try to beat the clock.
+                    </p>
+                    <img
+                      class="d-block w-100"
+                      src="./assets/ball.gif"
+                      alt="Fourth slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/XavierLaRosa/Roll-a-Ball-With-a-Twist"
                       >
                         GitHub <i class="fab fa-github"></i>
                       </a>
@@ -534,7 +583,7 @@
           </div>
         </div> -->
 
-        <div class="row justify-content-center fademeFirst" id="skillset">
+        <div class="row justify-content-center fademeThird" id="skillset">
           <div class="col-md-7" style="padding: 0;">
             <div class="card float-right" style="width: 100%;">
               <div class="card-body">
@@ -1165,6 +1214,10 @@
         var second = document.getElementsByClassName("fademeSecond")
         for (var i = 0; i < second.length; i++) {
           second[i].style.opacity = 1
+        }
+        var third = document.getElementsByClassName("fademeThird")
+        for (var i = 0; i < third.length; i++) {
+          third[i].style.opacity = 1
         }
       }
       function toggleView() {
