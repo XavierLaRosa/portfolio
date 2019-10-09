@@ -33,4 +33,6 @@ function updateGitHubPages {
         echo "SUCCESS: updated Git Hub Pages!"
 }
 
-updateGitHubPages
+
+    echo "Attempting to update GitHub Pages..."
+    updateGitHubPages
