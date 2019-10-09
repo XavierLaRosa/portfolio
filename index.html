@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://kit.fontawesome.com/6d61992055.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <title>Portfolio</title>
     <style>
       .row {
@@ -128,6 +129,7 @@
                   data-toggle="modal"
                   data-target="#resumeModal"
                   style="animation-delay: 1.95s;"
+                  id="resume-link"
                   >Resume <i class="far fa-newspaper"></i
                 ></a>
               </li>
@@ -247,25 +249,28 @@
                   ><span><i class="fas fa-users"></i></span>
           
             </div>
+            </div>
           </div>
+   
+        <div class="row fademeThird justify-content-center">
+          <h3 class="text-center" style="margin-top: 2%; opacity: 1;">
+              My Main Skills
+            </h3>
         </div>
-        <h3 class="text-center fademeThird" style="margin-top: 2%;">
-          My Main Skills
-        </h3>
-
         <div class="row d-flex justify-content-center fademeThird">
+
           <button
             class="btn btn-danger skill"
             onclick="smoothScroll(document.getElementById('skillset'))"
           >
-            ReactJS <i class="fab fa-react"></i>
+            ReactJS <i class="fab fa-react" style="color: #ffc107; transform: scale(1.50)"></i>
           </button>
           <button
             class="btn btn-success skill"
             onclick="smoothScroll(document.getElementById('skillset'))"
           >
             Angular
-            <i class="fab fa-angular"></i>
+            <i class="fab fa-angular" ></i>
           </button>
           <button
             class="btn btn-warning skill"
@@ -316,6 +321,7 @@
                     data-target="#carouselProjectIndicators"
                     data-slide-to="3"
                   ></li>
+
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active text-center">
@@ -358,7 +364,7 @@
                     <img
                       class="d-block w-100"
                       src="./assets/nardwuar.gif"
-                      alt="Third slide"
+                      alt="Second slide"
                     />
                     <div class="carousel-caption">
                       <a
@@ -385,13 +391,37 @@
                     <img
                       class="d-block w-100"
                       src="./assets/betterweather.gif"
-                      alt="Second slide"
+                      alt="Third slide"
                     />
                     <div class="carousel-caption">
                       <a
                         class="btn btn-primary shadow-lg"
                         target="_blank"
                         href="https://github.com/XavierLaRosa/weatherApp"
+                      >
+                        GitHub <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item text-center">
+                    <h6>Song library</h6>
+                    <span class="badge badge-pill badge-primary">JavaFX</span>
+                    <span class="badge badge-pill badge-secondary">Scene Builder</span>
+                    <span class="badge badge-pill badge-success">Data Structures</span>
+                    <p>
+                      Worked in a team of two to create a desktop application via JavaFX to display a song lisy with Add, Edit, and Delete functions.
+                    </p>
+                    <img
+                      class="d-block w-100"
+                      src="./assets/SongLibrary.gif"
+                      alt="Fourth slide"
+                    />
+                    <div class="carousel-caption">
+                      <a
+                        class="btn btn-primary shadow-lg"
+                        target="_blank"
+                        href="https://github.com/sangmattxavier/SongLib"
                       >
                         GitHub <i class="fab fa-github"></i>
                       </a>
@@ -408,7 +438,7 @@
                     <img
                       class="d-block w-100"
                       src="./assets/ball.gif"
-                      alt="Fourth slide"
+                      alt="Fifth slide"
                     />
                     <div class="carousel-caption">
                       <a
@@ -1205,7 +1235,7 @@
     ></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf3x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
     <script>
