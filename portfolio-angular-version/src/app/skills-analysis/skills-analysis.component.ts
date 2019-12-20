@@ -39,3 +39,4 @@ export class SkillsAnalysisComponent implements OnInit {
 
   ngOnInit() {}
 }
+//
