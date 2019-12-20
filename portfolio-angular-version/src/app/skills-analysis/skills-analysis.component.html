@@ -6,7 +6,18 @@
         <h6 class="card-subtitle mb-2 text-muted">
           See what makes me a well-rounded developer & designer!
         </h6>
-        <canvas id="myChart" width="1600" height="900"> </canvas>
+        <canvas
+          baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+          [colors]="pieChartColors"
+        >
+          >
+        </canvas>
       </div>
     </div>
   </div>
