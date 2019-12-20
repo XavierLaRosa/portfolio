@@ -8,3 +8,380 @@
     <app-skills-analysis></app-skills-analysis>
   </div>
 </div>
+<div
+  class="modal fade"
+  id="resumeModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="resumeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resumeModalLabel">
+          Resume - Xavier La Rosa
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <object
+          data="./assets/resume.pdf#page=2"
+          type="application/pdf"
+          width="100%"
+          height="100%"
+          style="height: 900px; margin-top: 2%;"
+        >
+          <p>
+            Your browser does not support PDFs.
+            <a href="./assets/resume.pdf">Download the PDF</a>.
+          </p>
+        </object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <img
+              src="./assets/rutgers.png"
+              class="img-fluid"
+              style="max-width: 10%;"
+              alt="Responsive image"
+            />
+            <img
+              src="./assets/dtcc.jpeg"
+              class="img-fluid"
+              style="max-width: 30%;"
+              alt="Responsive image"
+            />
+            <img
+              src="./assets/hackru.png"
+              class="img-fluid"
+              style="max-width: 10%;"
+              alt="Responsive image"
+            /> -->
+
+<!-- Button trigger modal -->
+<!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="contactModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="contactModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">
+          Send me an email!
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 class="card-title">
+          Just input your email and message, click submit, and I'll make sure to
+          get back to you ASAP
+        </h6>
+        <form
+          method="POST"
+          action="https://formspree.io/xavier.a.larosa@gmail.com"
+        >
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >Email</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                class="form-control"
+                id="inputEmail3"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"
+              >Body</label
+            >
+            <div class="col-sm-10">
+              <textarea
+                name="message"
+                placeholder="Your message"
+                class="form-control"
+                id="inputPassword3"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">
+                Submit Email
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="educationModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="educationModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="educationModalLabel">
+          Education
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="card-title">Rutgers University, New Brunswick</h5>
+        <ul>
+          <li>Jan. 2018 - Present</li>
+          <li>B.S Computer Science</li>
+          <li>Dean's List</li>
+          <li>Member of the National Society of Collegiate Scholars</li>
+        </ul>
+        <h5 class="card-title">County College of Morris (CCM)</h5>
+        <ul>
+          <li>Aug. 2015 - Jan.2018</li>
+          <li>Associates in Computer Science</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="employmentModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="employmentModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="employmentModalLabel">
+          Relevant Employment
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="card-title">
+          The Depository Trust & Clearing Corporation (DTCC)
+        </h5>
+        <h6>Application Development Intern</h6>
+        <h6>Jun. 2019 - Aug. 2019</h6>
+        <ul>
+          <li>
+            Developed a web application with a team comprised of only interns to
+            automate and solve an existing business problem
+          </li>
+          <li>
+            Designed and prototyped wireframes for a full redesign project on a
+            legacy application
+          </li>
+          <li>
+            Developed and enhanced End-User web applications, such as, creating
+            an Analytics Dashboard using the Chart.js library for data visuals
+          </li>
+          <li>
+            Performed User Research Case Studies and followed a user centered
+            design pattern for all projects
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#resumeModal"
+          >
+            View Resume
+          </button> -->
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="leadershipModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="leadershipModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="leadershipModalLabel">
+          Leadership
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="card-title">
+          HackRU
+        </h5>
+        <h6>Finance Team</h6>
+        <h6>Sep. 2018 - Present</h6>
+        <ul>
+          <li>
+            Reach out to companies for partnership opportunities
+          </li>
+          <li>
+            Supervise event and attend to needs of company representatives
+          </li>
+          <li>
+            Analyze and strategize a budgeting plan
+          </li>
+        </ul>
+
+        <h5 class="card-title">
+          Rutgers Mobile App Development Club (RUMAD)
+        </h5>
+        <h6>Representative & Student</h6>
+        <h6>Sep. 2018 - Present</h6>
+        <ul>
+          <li>
+            Attend accelerated coding program to sharpen skills in iOS
+            Development
+          </li>
+          <li>
+            Worked with teams in an agile SCRUM methodology to create projects
+          </li>
+          <li>
+            Promote and make testimonials about the mobile app community
+          </li>
+        </ul>
+
+        <h5 class="card-title">
+          Undergraduate Student Alliance of Computer Science (USACS)
+        </h5>
+        <h6>Member</h6>
+        <h6>Sep. 2018 - Present</h6>
+        <ul>
+          <li>
+            Network with like-minded individuals
+          </li>
+          <li>
+            Attend Computer Science events
+          </li>
+          <li>
+            Volunteer in events to help spread awareness and create a tighter
+            community
+          </li>
+        </ul>
+
+        <h5 class="card-title">
+          County College of Morris Dance Club (CCMDC)
+        </h5>
+        <h6>President</h6>
+        <h6>May 2015 - Jan. 2016</h6>
+        <ul>
+          <li>
+            Brought a 2 year long absent club back into operation
+          </li>
+          <li>
+            Delegated work and handled social media platforms
+          </li>
+          <li>
+            Created a stronger dance community
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
