@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+  <div class="col-md-3">
+    <img
+      src="../../assets/profile_pic_cropped.png"
+      alt=""
+      class="rounded-circle mx-auto d-block fademeFirst"
+      style="max-width: 100%;
+        height: auto; margin: 0;"
+    />
+  </div>
+  <div
+    class="col-md-6"
+    id="bio"
+    style="border-left: 1px rgb(199, 199, 199) solid;"
+  >
+    <h1 class="fademeFirst">Welcome!</h1>
+    <p>
+      <span class="fademeFirst">My name is Xavier </span>
+      <span class="fademeSecond"
+        >and I am a recent Application Development Intern at the Depository
+        Trust & Clearing Corporation (DTCC). Rising senior at Rutgers
+        University, New Brunswick studying Computer Science.</span
+      >
+    </p>
+    <div class="row justify-content-center fademeSecond">
+      <button
+        class="btn btn-primary fademeSecond skill"
+        data-toggle="modal"
+        data-target="#educationModal"
+      >
+        <span class="button-text">Education </span
+        ><span><fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon></span>
+      </button>
+
+      <button
+        class="btn btn-success fademeSecond skill"
+        data-toggle="modal"
+        data-target="#employmentModal"
+      >
+        <span class="button-text">Employment </span>
+        <span><fa-icon [icon]="['fas', 'briefcase']"></fa-icon></span>
+      </button>
+
+      <button
+        class="btn btn-danger fademeSecond skill"
+        data-toggle="modal"
+        data-target="#leadershipModal"
+      >
+        <span class="button-text">Leadership </span
+        ><span><fa-icon [icon]="['fas', 'users']"></fa-icon></span>
+      </button>
+    </div>
+  </div>
+</div>

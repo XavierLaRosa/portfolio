@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+.row {
+  margin-top: 2%;
+}
+.skill {
+  margin: 1%;
+}
+.skill:hover {
+  transition: 0.5s;
+}
+.accordion {
+  cursor: pointer;
+  padding: 1%;
+  border: none;
+  text-align: center;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/* .fademeFirst {
+  opacity: 0;
+  transition-duration: 1.5s;
+  transition-delay: 0s;
+}
+.fademeSecond {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 0.75s;
+}
+.fademeThird {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 1.25s;
+} */
+.btn,
+.nav-item {
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.nav-item:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1199px) {
+  .button-text {
+    display: none;
+  }
+  #bio {
+    border-left: none;
+  }
+  #bio p,
+  #bio h1 {
+    text-align: center;
+  }
+}
