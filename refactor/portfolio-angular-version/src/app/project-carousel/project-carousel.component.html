@@ -21,134 +21,79 @@
           <li data-target="#carouselProjectIndicators" data-slide-to="3"></li>
           <li data-target="#carouselProjectIndicators" data-slide-to="4"></li>
         </ol>
+
         <div class="carousel-inner">
           <div class="carousel-item active text-center">
-            <h6>Project-GG</h6>
-            <span class="badge badge-pill badge-primary">ReactJS</span>
-            <span class="badge badge-pill badge-secondary">Adobe XD</span>
-            <span class="badge badge-pill badge-success">Kanban</span>
-            <p>
-              Working with a team of three to develop a social media website
-              that is aimed towards gamers.
-            </p>
-
-            <img
-              class="d-block w-100"
-              src="../../assets/gg.gif"
-              alt="First slide"
-            />
-            <div class="carousel-caption">
-              <a
-                class="btn btn-primary shadow-lg"
-                target="_blank"
-                href="https://github.com/sangmattxavier/Project-GG"
-              >
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
+            <app-project-item
+              title="Project - GG"
+              [skills]="['ReactJS', 'Adobe XD', 'Kanban']"
+              description="Working with a team of three to develop a social media website
+            that is aimed towards gamers."
+              path="../../assets/gg.gif"
+              slide="First slide"
+              link="https:github.com/sangmattxavier/Project-GG"
+              [type]="true"
+            ></app-project-item>
+          </div>
+          <div class="carousel-item text-center">
+            <app-project-item
+              title="Nardwuar"
+              [skills]="['Swift', 'Xcode', 'Postman']"
+              description="Worked alongside a backend developer to create a mobile
+            application."
+              path="../../assets/nardwuar.gif"
+              slide="Second slide"
+              link="https://github.com/RU-Nardwuar/iOS_Nardwuar"
+              [type]="false"
+            ></app-project-item>
           </div>
 
           <div class="carousel-item text-center">
-            <h6>Nardwuar</h6>
-            <span class="badge badge-pill badge-primary">Swift</span>
-            <span class="badge badge-pill badge-secondary">Xcode</span>
-            <span class="badge badge-pill badge-success">Postman</span>
-            <p>
-              Worked alongside a backend developer to create a mobile
-              application.
-            </p>
-            <img
-              class="d-block w-100"
-              src="../../assets/nardwuar.gif"
-              alt="Second slide"
-            />
-            <div class="carousel-caption">
-              <a
-                class="btn btn-primary shadow-lg"
-                target="_blank"
-                href="https://github.com/RU-Nardwuar/iOS_Nardwuar"
-              >
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
+            <app-project-item
+              title="BetterWeather"
+              [skills]="['Swift', 'Xcode', 'Postman', 'DarkSky API']"
+              description="Created a mobile application that returns current weather data and
+              data for seven days forward."
+              path="../../assets/betterweather.gif"
+              slide="Third slide"
+              link="https://github.com/XavierLaRosa/weatherApp"
+              [type]="false"
+            ></app-project-item>
           </div>
 
           <div class="carousel-item text-center">
-            <h6>BetterWeather</h6>
-            <span class="badge badge-pill badge-primary">Swift</span>
-            <span class="badge badge-pill badge-secondary">Xcode</span>
-
-            <span class="badge badge-pill badge-success">Postman</span>
-            <span class="badge badge-pill badge-info">DarkSky API</span>
-            <p>
-              Created a mobile application that returns current weather data and
-              data for seven days forward.
-            </p>
-            <img
-              class="d-block w-100"
-              src="../../assets/betterweather.gif"
-              alt="Third slide"
-            />
-            <div class="carousel-caption">
-              <a
-                class="btn btn-primary shadow-lg"
-                target="_blank"
-                href="https://github.com/XavierLaRosa/weatherApp"
-              >
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
+            <app-project-item
+              title="Song Library"
+              [skills]="['JavaFX', 'Scene Builder', 'Data Strucutres']"
+              description="Worked in a team of two to create a desktop application via JavaFX
+              to display a song list with Add, Edit, and Delete functions."
+              path="../../assets/SongLibrary.gif"
+              slide="Fourth slide"
+              link="https://github.com/sangmattxavier/SongLib"
+              [type]="false"
+            ></app-project-item>
           </div>
 
           <div class="carousel-item text-center">
-            <h6>Song library</h6>
-            <span class="badge badge-pill badge-primary">JavaFX</span>
-            <span class="badge badge-pill badge-secondary">Scene Builder</span>
-            <span class="badge badge-pill badge-success">Data Structures</span>
-            <p>
-              Worked in a team of two to create a desktop application via JavaFX
-              to display a song list with Add, Edit, and Delete functions.
-            </p>
-            <img
-              class="d-block w-100"
-              src="../../assets/SongLibrary.gif"
-              alt="Fourth slide"
-            />
-            <div class="carousel-caption">
-              <a
-                class="btn btn-primary shadow-lg"
-                target="_blank"
-                href="https://github.com/sangmattxavier/SongLib"
-              >
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="carousel-item text-center">
-            <h6>Roll a Ball With a Twist</h6>
-            <span class="badge badge-pill badge-primary">Unity</span>
-            <span class="badge badge-pill badge-success">C#</span>
-            <p>
-              Created a two player unity application where players collect gems
-              and try to beat the clock.
-            </p>
-            <img
-              class="d-block w-100"
-              src="../../assets/ball.gif"
-              alt="Fifth slide"
-            />
-            <div class="carousel-caption">
-              <a
-                class="btn btn-primary shadow-lg"
-                target="_blank"
-                href="https://github.com/XavierLaRosa/Roll-a-Ball-With-a-Twist"
-              >
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
+            <app-project-item
+              title="Roll a Ball With a Twist"
+              [skills]="['JavaFX', 'Scene Builder', 'Data Strucutres']"
+              description="Created a two player unity application where players collect gems
+              and try to beat the clock."
+              path="../../assets/SongLibrary.gif"
+              slide="Fifth slide"
+              link="https://github.com/XavierLaRosa/Roll-a-Ball-With-a-Twist"
+              [type]="false"
+            ></app-project-item>
           </div>
         </div>
+        <!-- ***button panels are buggy -->
+        <!-- <app-project-carousel-control
+          [isPrev]="true"
+        ></app-project-carousel-control>
+        <app-project-carousel-control
+          [isPrev]="false"
+        ></app-project-carousel-control> -->
         <a
           class="carousel-control-prev"
           href="#carouselProjectIndicators"

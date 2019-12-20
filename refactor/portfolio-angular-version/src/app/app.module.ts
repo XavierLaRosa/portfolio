@@ -32,6 +32,8 @@ import {
   faBriefcase,
   faUsers
 } from "@fortawesome/free-solid-svg-icons";
+import { ProjectItemComponent } from './project-item/project-item.component';
+import { ProjectCarouselControlComponent } from './project-carousel-control/project-carousel-control.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import {
     GeneralBioComponent,
     MainSkillsComponent,
     ProjectCarouselComponent,
-    SkillsAnalysisComponent
+    SkillsAnalysisComponent,
+    ProjectItemComponent,
+    ProjectCarouselControlComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ChartsModule, FontAwesomeModule],
   providers: [],

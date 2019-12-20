@@ -1,0 +1,12 @@
+<h6>{{ title }}</h6>
+<span *ngFor="let skill of skills">
+  <span class="badge badge-pill badge-primary">{{ skill }}</span>
+</span>
+<p>{{ description }}</p>
+
+<img class="d-block w-100" src="{{ path }}" alt="{{ slide }}" />
+<div class="carousel-caption">
+  <a class="btn btn-primary shadow-lg" target="_blank" href="{{ link }}">
+    GitHub <fa-icon [icon]="['fab', 'github']"></fa-icon>
+  </a>
+</div>

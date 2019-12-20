@@ -1,0 +1,18 @@
+<a
+  [ngClass]="{
+    'carousel-control-prev': isPrev === true,
+    'carousel-control-next': isPrev === false
+  }"
+  href="#carouselProjectIndicators"
+  role="button"
+  data-slide="isPrev ? 'prev' : 'next'"
+>
+  <span
+    [ngClass]="{
+      'carousel-control-prev-icon': isPrev === true,
+      'carousel-control-next-icon': isPrev === false
+    }"
+    aria-hidden="true"
+  ></span>
+  <span class="sr-only">Previous</span>
+</a>
